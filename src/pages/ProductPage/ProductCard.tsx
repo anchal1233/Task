@@ -1,6 +1,16 @@
 import React from "react";
 
-const ProductCard = React.memo(({ product }) => {
+type Product = {
+ id: number
+ name: string
+ price: number
+}
+
+type Props = {
+ product: Product
+}
+
+const ProductCard = React.memo(({ product }: Props) => {
 
  return (
   <div

@@ -7,7 +7,13 @@ import AddCard from "./AddCard";
 
 export default function KanbanBoard() {
 
- const [tasks, setTasks] = useState([]);
+ type Task = {
+ id: number
+ title: string
+ status: string
+}
+
+const [tasks, setTasks] = useState<Task[]>([]);
 
  // load saved tasks
  useEffect(() => {

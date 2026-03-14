@@ -1,7 +1,12 @@
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-export default function ProtectedRoute({ children, allowedRoles }) {
+type Props = {
+ children: React.ReactNode
+ allowedRoles: string[]
+}
+
+export default function ProtectedRoute({ children, allowedRoles }: Props) {
 
  const { role } = useAuth();
 

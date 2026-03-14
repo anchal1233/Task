@@ -1,12 +1,17 @@
 import { useQuery } from "@tanstack/react-query";
 import { fetchDashboardStats } from "../../api/dashboardApi";
 
+type DashboardStats = {
+  users: number;
+  orders: number;
+  revenue: number;
+};
 export default function DashboardCards() {
 
- const { data, isLoading } = useQuery({
+ const { data, isLoading } = useQuery<DashboardStats>({
   queryKey: ["dashboardStats"],
   queryFn: fetchDashboardStats
- });
+});
 
  if (isLoading) return <p>Loading dashboard...</p>;
 

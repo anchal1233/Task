@@ -1,6 +1,6 @@
 import { FaTrash, FaPlus } from "react-icons/fa";
 
-export default function FieldCard({ field, updateField, deleteField }) {
+export default function FieldCard({ field, updateField, deleteField }: any) {
 
  const updateOption = (index, value) => {
   const newOptions = [...field.options];

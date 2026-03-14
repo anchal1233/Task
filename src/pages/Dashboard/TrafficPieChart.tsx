@@ -34,7 +34,7 @@ export default function TrafficPieChart() {
      outerRadius={80}
     >
 
-     {data.map((entry, index) => (
+     {data.map((_, index) => (
       <Cell key={index} fill={COLORS[index % COLORS.length]} />
      ))}
 

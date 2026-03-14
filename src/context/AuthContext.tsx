@@ -1,6 +1,11 @@
 import { createContext, useContext, useState } from "react";
 
-const AuthContext = createContext(null);
+type AuthType = {
+  role: string
+  setRole: React.Dispatch<React.SetStateAction<string>>
+}
+
+export const AuthContext = createContext<AuthType | null>(null);
 
 export const AuthProvider = ({ children }) => {
 
