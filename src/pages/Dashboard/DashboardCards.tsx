@@ -4,7 +4,7 @@ import { fetchDashboardStats } from "../../api/dashboardApi";
 type DashboardStats = {
   users: number;
   orders: number;
-  revenue: number;
+  revenue: string;
 };
 export default function DashboardCards() {
 

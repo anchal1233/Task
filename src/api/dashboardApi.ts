@@ -1,4 +1,9 @@
-export const fetchDashboardStats = async () => {
+type DashboardStats = {
+  users: number;
+  orders: number;
+  revenue: string; // 👈 string kar diya (kyunki "$25k" hai)
+};
+export const fetchDashboardStats = async (): Promise<DashboardStats> => {
 
  return new Promise((resolve) => {
 
