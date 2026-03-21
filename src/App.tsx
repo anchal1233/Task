@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import Dashboard from "./pages/Dashboard/Dashboard";
 import TablePage from "./pages/TablePage/TablePage";
@@ -11,7 +11,7 @@ import ProtectedRoute from "./auth/ProtectedRoute";
 function App() {
 
   return (
-    <BrowserRouter>
+    <HashRouter>
 
       <Routes>
 
@@ -33,7 +33,7 @@ function App() {
 
       </Routes>
 
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
